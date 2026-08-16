@@ -1,0 +1,12 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "b7505938-846d-4caa-b15c-089145f6ce47")
+	(paper "A5")
+	(title_block
+		(title "Status LED")
+		(date "2026-05-30")
+	)
+	(lib_symbols)
+)

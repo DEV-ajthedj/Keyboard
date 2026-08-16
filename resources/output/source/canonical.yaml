@@ -1,0 +1,297 @@
+meta:
+    engine: 4.2.1
+    author: Ajay Balusu
+units:
+    leftright_angle: 10
+    column_angle: 2
+    function_angle: 3
+    function_hspacing: 4
+    function_vspacing: 4
+    size: u - 1
+points:
+    zones:
+        main:
+            anchor:
+                shift:
+                    - 40
+                    - 0
+                rotate: leftright_angle
+            mirror:
+                distance: 0
+            columns:
+                inner: null
+                index:
+                    key:
+                        stagger: 0.2u
+                        spread: u + 2
+                        splay: '-column_angle'
+                        origin:
+                            - '-u/2'
+                            - u/2
+                middle:
+                    key:
+                        stagger: 0.2u
+                        spread: u + 2
+                        splay: '-column_angle'
+                        origin:
+                            - '-u/2'
+                            - u/2
+                ring:
+                    key:
+                        stagger: 0.2u
+                        spread: u + 2
+                        splay: '-column_angle'
+                        origin:
+                            - '-u/2'
+                            - u/2
+                pinky:
+                    key:
+                        stagger: '-0.2u'
+                        spread: u + 2
+                        splay: '-column_angle'
+                        origin:
+                            - '-u/2'
+                            - u/2
+                pinkyextra:
+                    rows:
+                        center:
+                            skip: true
+                        bottom:
+                            skip: true
+                    key:
+                        stagger: '-0.2u'
+                        spread: u + 2
+                        splay: '-column_angle'
+                        origin:
+                            - '-u/2'
+                            - u/2
+                outer:
+                    rows:
+                        numbers:
+                            width: size
+                            shift:
+                                - '-0.5(size) - 2'
+                                - 0
+                            asym: clone
+                        top:
+                            width: 2(size) + 4
+                            shift:
+                                - 0.5(size) + 1.75
+                                - 0
+                        center:
+                            width: 3(size) + 7.5
+                            shift:
+                                - '-0.5(size) - 1.75'
+                                - 0
+                            asym: source
+                        bottom:
+                            width: 3(size) + 7.5
+                            adjust:
+                                shift:
+                                    - '-0.5(size) - 1.75'
+                                    - 0
+                    key:
+                        width: 2(size) + 2
+                        spread: u + 0.5(size)
+                        shift:
+                            - 0.25(size)
+                            - 0
+                outerextra:
+                    rows:
+                        bottom:
+                            skip: true
+                        center:
+                            skip: true
+                        top:
+                            skip: true
+                        numbers:
+                            shift:
+                                - '-0.25(size) + 1'
+                                - 0
+                            asym: clone
+                extra1:
+                    rows:
+                        bottom:
+                            skip: true
+                        center:
+                            skip: true
+                        top:
+                            skip: true
+                        numbers:
+                            asym: source
+                            width: 2(size) + 4
+                            shift:
+                                - '-0.75(size) - 1'
+                                - 0
+                    key:
+                        spread: 0
+                extra2:
+                    rows:
+                        bottom:
+                            skip: true
+                        top:
+                            skip: true
+                        numbers:
+                            skip: true
+                        center:
+                            asym: clone
+                            width: size
+                            shift:
+                                - '-2.5(size) - 2'
+                                - 0
+                    key:
+                        spread: 0
+                extra3:
+                    rows:
+                        bottom:
+                            skip: true
+                        top:
+                            skip: true
+                        numbers:
+                            skip: true
+                        center:
+                            asym: clone
+                            width: 2(size) + 4
+                            shift:
+                                - '-0.75(size) - 1'
+                                - 0
+                    key:
+                        spread: 0
+            rows:
+                bottom: null
+                center: null
+                top: null
+                numbers: null
+        functions:
+            anchor:
+                shift:
+                    - 40 - cos(80*pi/180) * 4u
+                    - 80
+            mirror:
+                distance: 0
+            columns:
+                '0':
+                    key:
+                        stagger: 0
+                        spread: u + function_hspacing
+                        splay: function_angle
+                '1':
+                    key:
+                        stagger: 1.5function_vspacing
+                        spread: u + function_hspacing
+                        splay: function_angle
+                '2':
+                    key:
+                        stagger: 1.5function_vspacing
+                        spread: u + function_hspacing
+                        splay: '-function_angle'
+                '3':
+                    key:
+                        stagger: 0
+                        spread: u + function_hspacing
+                        splay: '-function_angle'
+                '4':
+                    key:
+                        stagger: '-0.5function_vspacing'
+                        spread: u + function_hspacing
+                        splay: '-function_angle'
+                '5':
+                    key:
+                        stagger: '-0.5function_vspacing'
+                        spread: u + function_hspacing
+                        splay: 0
+                '6':
+                    key:
+                        stagger: 0
+                        spread: u + function_hspacing
+                        splay: function_angle
+                '7':
+                    key:
+                        stagger: 0
+                        spread: u + function_hspacing - 1.4
+                        splay: 0
+            key:
+                height: 1.0(size)
+        special:
+            anchor:
+                shift:
+                    - 75
+                    - -25
+            mirror:
+                distance: 0
+            columns:
+                space:
+                    key:
+                        width: 4.75(size)
+                        shift:
+                            - -30
+                            - 0
+                alt:
+                    key:
+                        splay: 4
+                        spread: 1.75u
+                        stagger: 1
+                win:
+                    key:
+                        stagger: 1
+                        spread: 1.75u
+                        splay: 4
+                ctrl:
+                    key:
+                        stagger: 1
+                        spread: 1.75u + 0.25(size)
+                        splay: 4
+                        width: 2(size)
+            key:
+                width: 1.5(size)
+        navigation:
+            anchor:
+                shift:
+                    - 220
+                    - -25
+            mirror: 241
+            columns:
+                leftright:
+                    rows:
+                        uparrow:
+                            skip: true
+                        joystick:
+                            skip: true
+                updown:
+                    rows:
+                        joystick:
+                            width: 4(size)
+                            height: 3(size)
+                            shift:
+                                - 0
+                                - 20
+                        bottom:
+                            shift:
+                                - 0
+                                - 19.35
+                    key:
+                        asym: source
+            key:
+                spread: u + 2
+            rows:
+                bottomarrows: null
+                uparrow: null
+                joystick: null
+                bottom:
+                    shift:
+                        - 0
+                        - 39.35
+                top: null
+        sliders:
+            anchor:
+                shift:
+                    - 300
+                    - 35
+            columns:
+                c1: null
+                c2: null
+                c3: null
+            key:
+                width: size
+                height: 100
+                spread: u + 2

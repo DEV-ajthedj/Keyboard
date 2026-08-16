@@ -1,0 +1,17 @@
+U: 19.05
+u: 19
+cx: 18
+cy: 17
+$default_stagger: 0
+$default_spread: 19
+$default_splay: 0
+$default_height: 18
+$default_width: 18
+$default_padding: 19
+$default_autobind: 10
+leftright_angle: 10
+column_angle: 2
+function_angle: 3
+function_hspacing: 4
+function_vspacing: 4
+size: 18
